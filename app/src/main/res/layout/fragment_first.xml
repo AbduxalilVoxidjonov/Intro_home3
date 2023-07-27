@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FirstFragment">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" >
+    </androidx.viewpager2.widget.ViewPager2>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        app:tabBackground="@drawable/select"
+        app:tabGravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </com.google.android.material.tabs.TabLayout>
+    <LinearLayout
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Ro'yxatdan o'tish"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:text="O'tkazib yubor"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
